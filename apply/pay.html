@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <title>支付页面</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="stylesheet" href="../css/mui.min.css">
+    <link rel="stylesheet" href="../css/icons-extra.css" />
+    <link rel="stylesheet" href="../css/index.css">
+    <script src="../js/mui.min.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body ng-controller="payController">
+<header id="header" class="mui-bar mui-bar-nav">
+    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left">
+        <span style="font-size: 1rem;color: #000;">在线支付</span>
+    </a>
+</header>
+
+<div class="mui-content">
+    <ul class="mui-table-view" style="margin-top: 8px">
+
+        <li class="mui-table-view-cell mui-media mui-radio">
+            <a href="javascript:;">
+                <p href="" style="font-size: 1.0rem" class="mui-icon mui-pull-right">
+                    <span id="detail">详情</span>
+                    <span style="margin-left: 20px" >￥{{applyCount}}</span>
+
+                </p>
+                <div class="mui-media-body">
+                    <p class='mui-ellipsis'>订单</p>
+                </div>
+            </a>
+        </li>
+    </ul>
+    <ul class="mui-table-view" style="margin-top: 8px">
+        <li class="mui-table-view-cell mui-media">
+            <a href="javascript:;">
+                <div class="mui-media-body">
+                    <p class='mui-ellipsis' >选择支付方式</p>
+                </div>
+            </a>
+        </li>
+        <li class="mui-table-view-cell mui-media mui-radio">
+            <a href="javascript:;">
+                <p href="" style="font-size: 1.0rem" class="mui-icon mui-pull-right">
+                    <input type="radio">
+                </p>
+                <div class="mui-media-body">
+                    <p class='mui-ellipsis' style="color: #000;font-size: 1rem">微信</p>
+                </div>
+            </a>
+        </li>
+    </ul>
+    <div class="custom"></div>
+    <!--底部导航-->
+    <footer id="footer">
+        <div class="nav-right" style="width:100%;background-color: #06CD3E;text-align: center;color: white">
+            <a ng-click="rediertToOrder(item)"><p style="color: white;">确认支付</p></a>
+        </div>
+    </footer>
+</div>
+<script src="../js/mui.min.js"></script>
+<script src="../bower_components/angular/angular.min.js"></script>
+<script src="../bower_components/angular-route/angular-route.js"></script>
+<script src="../js/jquery.min.js"></script>
+<script src="../scripts/app.js"></script>
+<script src="../scripts/controllers.js"></script>
+<script>
+
+    $("#detail").click(function () {
+        window.location.href = 'older.html'
+    })
+</script>
+</body>
+</html>

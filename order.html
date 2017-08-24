@@ -1,0 +1,41 @@
+
+<header id="header" class="mui-bar mui-bar-nav">
+    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+    <h1 class="mui-title">
+        订单列表
+    </h1>
+</header>
+
+<div class="mui-content">
+    <ul class="mui-table-view" style="margin-top: 8px">
+        <li class="mui-table-view-cell mui-media">
+
+            <a href="javascript:;">
+                <p href="" style="font-size: 1.0rem" class="mui-icon mui-pull-right">
+                    <span id="price" style="padding-left: 20px">{{state}}</span>
+                </p>
+                <div class="mui-media-body">
+                    <span href=""  style="font-size: 1.2rem">状态</span>
+                </div>
+                <p style="color: #000;font-size: 1.0rem;padding: 15px 10px" >￥33.25</p>
+            </a>
+        </li>
+        <li class="mui-table-view-cell mui-media"ng-repeat="items in item">
+            <a href="javascript:;">
+                <div class="mui-media-body">
+                    <p class='mui-ellipsis' >{{item.name}}</p>
+                    <h5 style="color: #000;">￥{{item.count*item.price}}</h5>
+                </div>
+            </a>
+        </li>
+        <li class="mui-table-view-cell mui-media">
+            <a href="javascript:;">
+                <h4 href="" style="font-size: 1.0rem" class="mui-icon mui-pull-right">
+                    <button type="button" class="mui-btn mui-btn-green">再来一单</button>
+                </h4>
+            </a>
+        </li>
+    </ul>
+    <div class="custom"></div>
+
+</div>

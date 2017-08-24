@@ -1,0 +1,62 @@
+<!--<script>-->
+    <!--$(document).ready(function () {-->
+        <!--$("#nav").height($(window).height()-94);-->
+    <!--})-->
+    <!--alert("111111111")-->
+<!--</script>-->
+<!--头部-->
+<header class="mui-row mui-bar mui-bar-nav" style="text-align: center;">
+    <input class=" mui-input-clear ssk"  id="search" type="search"-+ placeholder="搜索店内商品" >
+</header>
+<div class="mui-content" id="content">
+    <!--左侧导航栏-->
+    <div class="nav" id="nav">
+        <dl >
+            <dd ng-repeat="nav in goods" ng-class="{activeDd:activeTab == $index}"><p ng-click="showNav(nav,$index)" >{{nav.name}}</p></dd>
+        </dl>
+    </div>
+    <!--右侧-->
+    <div class="body"  id="proContent" >
+        <!--title-->
+        <div class="content-title" >
+            <h3>{{goodsName}}</h3>
+        </div>
+        <div ng-repeat="content in foods">
+
+            <!--产品-->
+            <div class="product" >
+            <div class="product-img" id="product">
+                <a href="{{pros}}">
+                    <img src="{{content.image}}" ng-click="showPro(content)"  alt="" />
+                </a>
+            </div>
+            <div class="product-content">
+                <h3>{{content.name}}</h3>
+                <p id="slogan" >{{content.info}}</p>
+                <div class="product-content-sale">
+                    <div class="num">
+                        <p>月售{{content.sellCount}}份</p>
+                    </div>
+                    <div class="access">
+                        <p>好评率{{content.rating}}</p>
+                    </div>
+                </div>
+
+                <div class="product-price">
+                    <div class="price">
+                        <span id="present">￥{{content.price}}</span>
+                        <span>起</span>
+                    </div>
+                    <div class="add" >
+                        <button id="subtract" ng-click="change(-1,content)">-</button>
+                        <span  id="count">{{content.count}}</span>
+                        <button id="addCount" ng-click="change(1,content)">+</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+    <div class="custom"></div>
+
+</div>

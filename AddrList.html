@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>收货地址列表</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+	    <!--<meta name='viewport' content='width=device-width, initial-scale=1'>-->
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	    <meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="css/mui.min.css" />
+		<link rel="stylesheet" href="css/AddrList.css" />
+		<script src="js/mui.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body class="mui-bar mui-bar-nav" style="background-color: white;">>
+	<header id="header" class="mui-bar mui-bar-nav">
+		<a href="" class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left" style="color: #000">
+			<span style="font-size: 1rem;" >编辑地址</span>
+		</a>
+	</header>
+		<div class="mui-content mui-col-xs-12"
+			<ul class="mui-table">
+			    <li class="mui-table-view-cell mui-media">
+			    	<a href="address.html" class="mui-pull-right aStyle">编辑</a>
+			            <div class="mui-media-body">
+			                <span>收货人：</span><span id="person" class="fontStyle">赵某</span>
+			                <p class='mui-ellipsis' style="padding-top: 15px;">地址：成都市温江区花样年华</p>
+			            </div>
+			    </li>
+			    <li class="mui-table-view-cell">
+			    	<a href="address.html" class="mui-pull-right">编辑</a>
+			        <div class="mui-media-body">
+			                <span>收货人：</span><span id="person" class="fontStyle">赵某</span>
+			                <p class='mui-ellipsis' style="padding-top: 15px;">地址：成都市温江区花样年华</p>
+			        </div>
+			    </li>
+			</ul>
+			<button class="mui-btn-add" id="add">添加新收货地址</button>
+		</div>
+		<script type="text/javascript">
+			mui.init();
+			document.getElementById("add").addEventListener("tap",function(){
+				mui.openWindow({
+					url:"address.html",
+					id:"edit"
+				})
+		});
+		</script>
+	</body>
+</html>

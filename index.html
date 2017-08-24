@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="css/mui.min.css">
+		<link rel="stylesheet" href="css/icons-extra.css">
+		<link rel="stylesheet" href="css/index.css">
+		<link rel="stylesheet" href="css/cart.css">
+	</head>
+	<body ng-app="app">
+	<div ng-view>
+
+	</div>
+	<nav class="mui-bar-tab mui-bar" ng-controller="navController" >
+		<a  class="mui-tab-item" ng-class="{navActive:$index ==0}" ng-repeat="(key,nav) in navs" href="{{nav.link}}">
+			<span class="{{nav.icon}}"></span>
+			<span style="background-color: #dd524d" class="mui-badge mui-badge-primary" ng-show="$index==1">{{countNum}}</span>
+			<span class="mui-tab-label">{{nav.text}}</span>
+		</a>
+	</nav>
+
+	<script src="bower_components/angular/angular.min.js"></script>
+	<script src="bower_components/angular-route/angular-route.js"></script>
+	<script src="js/jquery.min.js"></script>
+	<script src="scripts/app.js"></script>
+	<script src="scripts/controllers.js"></script>
+	<script src="js/mui.min.js"></script>
+	<script>
+        mui('body').on('tap','a',function(){
+            window.top.location.href=this.href;
+        });
+	</script>
+
+	</body>
+
+</html>

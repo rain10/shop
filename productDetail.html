@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1 , user-scalable=no">
+    <title>商品详情页</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/productDetail.css" />
+    <link href="http://cdn.bootcss.com/Swiper/3.4.2/css/swiper.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/mui.min.css" />
+    <link rel="stylesheet" href="css/icons-extra.css">
+    <script src="js/mui.min.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+<div class="detail" ng-controller="productDetailController">
+    <!--头部-->
+    <header class="mui-bar mui-bar-transparent">
+        <a href="javascript:;" onclick="window.history.go(-1); " class="mui-icon mui-icon-back"></a>
+    </header>
+    <!--轮播图-->
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="images/muwu.jpg" /></div>
+            <div class="swiper-slide"><img src="images/shuijiao.jpg" /></div>
+            <div class="swiper-slide"><img src="images/yuantiao.jpg" /></div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+   <!--商品名-->
+    <div class="goods">
+        <div class="goods-name">
+            <h2>蒜蓉蒸扇贝</h2>
+        </div>
+        <div class="goods-msg">
+            <div class="goods-msg-send">
+                <span class="goods-name-price">￥ 13.9</span>
+            </div>
+            <div class="goods-msg-sale">
+                    <button id="pro-jian">-</button>
+                    <span id="cart-num">1</span>
+                    <button id="pro-jia">+</button>
+            </div>
+        </div>
+    </div>
+
+   <!--商品详情-->
+    <div class="goods-comment" id="detail">
+        <div class="goods-comment-reviewCount">
+            <div class="goods-left"></div>
+            <div class="goods-content">详情</div>
+            <div class="goods-right"></div>
+        </div>
+        <div class="custom"></div>
+        <div class="custom-white"></div>
+        <div class="detail-product-img">
+            <ul>
+                <li><img src="images/muwu.jpg"/></li>
+                <li><img src="images/muwu.jpg"/></li>
+                <li><img src="images/muwu.jpg"/></li>
+                <li><img src="images/muwu.jpg"/></li>
+            </ul>
+        </div>
+    </div>
+    <div class="custom"></div>
+</div>
+<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/productDetail.js" type="text/javascript" charset="utf-8"></script>
+<script src="http://cdn.bootcss.com/Swiper/3.4.2/js/swiper.jquery.js"></script>
+<script src="bower_components/angular/angular.min.js"></script>
+<script src="scripts/app.js"></script>
+<script src="scripts/controllers.js"></script>
+<script language="javascript">
+    var mySwiper = new Swiper('.swiper-container',{
+        pagination : '.swiper-pagination',
+        autoplay: 3000,
+        paginationClickable :true,
+    })
+    $('#pro-jian').click(function () {
+        var oldValue = parseInt($("#cart-num").text());
+        oldValue--;
+        $("#cart-num").text(oldValue);
+        if (oldValue<=0) {
+            $("#cart-num").css('display', 'none');
+            $('#pro-jian').css('display', 'none');
+        }
+    });
+    $('#pro-jia').click(function () {
+        $("#cart-num").css('display', 'block');
+        $('#pro-jian').css('display', 'block');
+        var oldValue = parseInt($("#cart-num").text());
+        console.log(oldValue)
+        oldValue++;
+        $("#cart-num").text(oldValue);
+    });
+</script>
+</body>
+</html>

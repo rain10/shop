@@ -1,0 +1,93 @@
+
+<div class="mui-content">
+    <ul class="mui-table-view" style="margin-top: 8px">
+        <li class="mui-table-view-cell mui-media mui-radio">
+            <a href="address.html">
+                <p href="" style="font-size: 1.0rem" class="mui-icon mui-icon-arrowright mui-pull-right">
+
+                </p>
+                <div class="mui-media-body">
+                    <p class='mui-ellipsis' style="color: #000;font-size: 1rem">
+                        <span class="mui-icon mui-icon-location"></span>    收货地址
+                    </p>
+                </div>
+            </a>
+        </li>
+    </ul>
+    <ul class="mui-table-view" style="margin-top: 8px">
+        <li class="mui-table-view-cell mui-media mui-radio">
+            <a href="javascript:;">
+                <div class="mui-media-body">
+                    <p class='mui-ellipsis'>
+                        选中商品
+                    </p>
+                </div>
+            </a>
+        </li>
+        <li class="mui-table-view-cell mui-media" ng-repeat="items in item">
+            <a href="javascript:;">
+                <p href="" style="font-size: 1.0rem" class="mui-icon mui-pull-right">
+                    <span id="num">×{{items.count}}</span>
+                    <span id="price" style="padding-left: 20px">￥{{items.count*items.price}}</span>
+                </p>
+                <div class="mui-media-body">
+                    <p class='mui-ellipsis'>{{items.name}}</p>
+                </div>
+            </a>
+        </li>
+    </ul>
+    <ul class="mui-table-view" style="margin-top: 8px">
+        <li class="mui-table-view-cell mui-media">
+            <a href="javascript:;">
+                <div class="mui-media-body">
+                    <p class='mui-ellipsis' >选择支付方式</p>
+                </div>
+            </a>
+        </li>
+        <li class="mui-table-view-cell mui-media mui-radio">
+            <a href="javascript:;">
+                <p href="" style="font-size: 1.0rem" class="mui-icon mui-pull-right">
+                    <input type="radio">
+                </p>
+                <div class="mui-media-body">
+                    <p class='mui-ellipsis' style="color: #000;font-size: 1rem">微信</p>
+                </div>
+            </a>
+        </li>
+    </ul>
+    <!--订单信息-->
+    <div class="custom"></div>
+    <div class="footer-car">
+        <div class="footer-car-left">
+            <p>总额：
+                <span>￥{{priceCount}}</span>
+                <span href="" class="mui-icon mui-icon-arrowup" id="show" ng-click=""></span>
+            </p>
+        </div>
+        <div class="footer-car-right" ng-show="priceCount == 0">
+            <a >20起送</a>
+        </div>
+        <div style="background-color: #c7254e"  class="footer-car-right" ng-show="priceCount > 0 && priceCount<20">
+            <a >还差￥{{20-priceCount}}</a>
+        </div>
+        <div class="footer-car-right" ng-show="priceCount >= 20" style="background-color: #4cd964">
+            <p ng-click="rediret(priceCount,item)" style="color: #fff;font-size: 14px">￥{{priceCount}}</p>
+        </div>
+    </div>
+    <div id="cart-List"  ng-show="flag">
+        <div class="car-title">
+            <div class="car-title-left">
+                <span>商品总额</span>
+            </div>
+            <div class="car-title-right">
+                <a href="#">
+                    <span style="font-size: 15px;">{{priceCount}}</span>
+                </a>
+            </div>
+        </div>
+        <div class="carProduct">
+            <span style="padding-left: 10px">配送费2元</span>
+            <span style="padding-left: 20%">20起送</span>
+            <span style="padding-left: 20%">满50免配送费</span>
+        </div>
+    </div>

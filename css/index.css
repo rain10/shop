@@ -1,0 +1,341 @@
+.mui-content {
+	font-family: "微软雅黑";
+	font-size: 14px;
+	min-width: 300px;
+	max-width: 750px;
+	margin: 0 auto;
+}
+dl {
+	list-style: none;
+	padding: 0;
+	margin-top: 0;
+	margin: 0;
+}
+p {
+	margin: 0;
+	padding: 0;
+}
+h3 {
+	margin: 0;
+}
+
+	/*左侧导航开始*/
+	.nav {
+		text-align: left;
+		width: 25%;
+		float: left;
+		overflow: scroll;
+		background-color: #eee
+		/*height:500px;*/
+	}
+	.mui-bar-tab .mui-tab-item.mui-active {
+		color: #cf2d28;
+	}
+	.navActive {
+		color: #cf2d28;
+	}
+	.nav dd {
+		margin: 0;
+		padding: 20px 10px;
+		border-bottom: 1px solid #ddd;
+	}
+	.nav dd p {
+		font-size: 15px;
+	}
+	.activeDd {
+		background-color: #fff;
+		border-left: 5px solid #4cd964;
+	}
+	.span {
+		display: block;
+		padding: 1px 5px;
+		border-radius: 25%;
+		background-color: red;
+	}
+	.nav dd a {
+		color: #000000;
+	}
+	.active {
+		background-color: #fff;
+		border-left: 5px #007AFF solid;
+	}
+	/*左侧导航结束*/
+
+
+	/*右侧详情开始*/
+	.body {
+		width: 75%;
+		padding: 20px 5px;
+		float: left;
+		overflow: scroll;
+		background-color: #FFFFFF
+	}
+	.content-title {
+		width: 100%;
+		height: 40px;
+		border-bottom: 1px #F0F0F0 solid;
+	}
+	p {
+		font-size: 10px;
+		margin-top: 0;
+		color: #8f8f94;
+	}
+	.mui-h3, h3 {
+		font-size: 17px;
+	}
+	.content-title h5{
+		width: 30%;
+		float: left;
+		font-size: 1.2rem;
+		margin: 0;
+	}
+	.content-title p {
+		width: 70%;
+		float: left;
+		margin-top: 10px;
+	}
+	.product {
+		width: 100%;
+		padding: 18px 0;
+		height: 8.5rem;
+		/*background-color:salmon;*/
+		border-bottom: 1px solid #F0F0F0;
+	}
+	.product-img {
+		height: 6.0rem;
+		width: 35%;
+		float: left;
+	}
+	.product-img img {
+		width: 100%;
+		height: 100%;
+	}
+	.product-content {
+		height: 6.0rem;
+		width: 65%;
+		float: left;
+		padding-left: 10px;
+		position: relative;
+	}
+	#slogan {
+
+		white-space: nowrap;
+		text-overflow:ellipsis;
+		text-overflow: ellipsis;
+		overflow:hidden;
+	}
+	.product-content-sale {
+		width: 100%;
+		height: 28px;
+		margin: 0;
+	}
+	.product-content-sale .num {
+		width: 40%;
+		float: left;
+		
+	}
+	.num  p ,.access p{
+		font-size: 0.6rem;
+	}
+	.product-content-sale .access {
+		width: 60%;
+		float: left;		
+	}
+
+	.product-price {
+		position: absolute;
+		width: 100%;
+		height: 30px;
+		bottom: 0;
+	}
+	.price {
+		width: 50%;
+		float: left;
+		height: 30px;
+		line-height: 30px;
+	}
+	.price span {
+		color: #F35D00;
+	}
+	.price span:last-child {
+		font-size: 10px;
+	}
+	.add {
+		width: 50%;
+		float: right;
+		height: 30px;
+		line-height: 30px;
+		/*border: 1px #cccccc solid;*/
+	}
+	.add #subtract {
+		height: 27px;
+		padding: 0;
+		text-align: center;
+		width: 30%;
+		float: left;
+		border: 1px solid #ccc;
+	}
+	.add #count {
+		text-align: center;
+		width: 25%;
+		height: 27px;
+		line-height: 27px;
+		border: none;
+		float: left;
+		display: block;
+		border-top:1px solid #ccc;
+		border-bottom: 1px solid #ccc;
+	}
+	.add #addCount {
+		height: 27px;
+		padding: 0;
+		border: none;
+		text-align: center;
+		width: 30%;
+		float: left;
+		border: 1px solid #ccc;
+	}
+	/*右侧详情结束*/
+	.custom {
+		height: 50px;
+		width: 100%;
+	}
+	/*footer start*/
+	#footer {
+		width: 100%;
+		height: 50px;
+		position: fixed;
+		bottom: 0;
+		right: 0;
+		background-color: #000000
+	}
+	.nav-left {
+		float: left;
+		width: 70%;
+		height: 50px;
+		background-color: #434446;
+		padding: 10px 30px;
+	}
+	.logo {
+		float: left;
+		width: 20%;
+		height: 30px;
+		margin-right: 10px;
+		border-radius: 50% 50%;
+		background-color: #333;
+	}
+	.mui-icon-extra  {
+		font-size: 30px;
+	}
+	 a {
+		color: #5e5f61;
+	}
+	.nav-right {
+		float: left;
+		width: 30%;
+		height: 50px;
+		line-height: 50px;
+		background-color: #5E5F61;
+	}
+	.nav-right p{
+		color: #a7a8aa;
+		font-size: 1.2rem;
+	}
+	.mui-popover {
+		width: 90%;
+		height: 100px;
+		margin: 10px 10px;
+			}
+	#cartList {
+		position: fixed;
+		bottom: 50px;
+		width: 100%;
+	}		
+	.car-title {
+		width: 100%;
+		height: 40px;
+		background-color: #EEEEEE;
+		padding: 10px 20px;
+	}
+	.car-title-left {
+		font-size: 17px;
+		padding: 0 10px;
+		height: 20px;
+		width: 50%;
+		float: left;
+		border-left: 5px solid #007AFF;
+	}
+	.car-title-right {
+		float: right;
+		width: 50%;
+		padding-left: 25%;
+	}
+	.carProduct {
+		width: 100%;
+		height: 50px;
+		border-bottom: 1px solid #F2F2F2;
+		background-color: #fff;
+	}
+	.pro-name {
+		width: 50%;
+		float: left;
+		height: 50px;
+		line-height: 30px;
+		padding: 10px 30px;
+	}
+	.pro-price {
+		width: 20%;
+		float: left;
+		height: 50px;
+		line-height: 30px;
+		padding: 10px 10px;
+	}
+	.pro-btn {
+		width: 30%;
+		float: right;
+		padding: 10px 0;
+		line-height: 30px;
+		padding-right: 10px;
+	}
+	.pro-btn #pro-jian {
+		width: 30%;
+		height: 1.8rem;
+		float: left;
+		line-height: 50px;
+		background: url(../images/jian.jpg) no-repeat;
+		background-size: 100% 100%;
+		border: none;
+	}
+	.pro-btn #pro-jia {
+		width: 30%;
+		height: 1.8rem;
+		float: right;
+		line-height: 50px;
+		background: url(../images/jia.jpg) no-repeat;
+		background-size: 100% 100%;
+		border: none;
+	}
+	.pro-btn #cart-num {
+		width: 40%;
+		float: left;
+		display: block;
+		text-align: center;
+	}
+	#overlay {
+		background: #000;
+		filter: alpha(opacity=50); /* IE的透明度 */
+		opacity: 0.5; /* 透明度 */
+		display: none;
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		width: 100%;
+		height: 100%;
+		z-index: 100; /* 此处的图层要大于页面 */
+		display:none;
+		_background-color:#a0a0a0; /* 解决IE6的不透明问题 */
+	}
+	/*footer end*/
+.activenav {
+	color: #c7254e;
+}
